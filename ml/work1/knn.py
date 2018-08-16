@@ -15,10 +15,10 @@ from sklearn.metrics import classification_report
 def main(data):
 
         # loads data
-        print "Loading data..."
+        print ("Loading data...")
         X_data, y_data = load_svmlight_file(data)
         # splits data
-        print "Spliting data..."
+        print ("Spliting data...")
         X_train, X_test, y_train, y_test =  cross_validation.train_test_split(X_data, y_data, test_size=0.4)
 
         # fazer a normalizacao dos dados #######
@@ -29,19 +29,19 @@ def main(data):
         # cria um kNN
         neigh = KNeighborsClassifier(n_neighbors=3, metric='euclidean')
 
-        print 'Fitting knn'
+        print ('Fitting knn')
         neigh.fit(X_train, y_train)
 
         # predicao do classificador
-        print 'Predicting...'
+        print ('Predicting...')
         y_pred = neigh.predict(X_test)
 
         # mostra o resultado do classificador na base de teste
-        print neigh.score(X_test, y_test)
+        print (neigh.score(X_test, y_test))
 
         # cria a matriz de confusao
         cm = confusion_matrix(y_test, y_pred)
-        print cm
+        print (cm)
 	#print classification_report(y_test, y_pred)
 	#pl.matshow(cm)
 	#pl.colorbar()
