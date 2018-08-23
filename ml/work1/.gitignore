@@ -1,5 +1,18 @@
-imdb_master.csv.zip
-reviews_data.txt.gz
-digits
-features.txt
-modelogensim
+_Store
+npm-debug.log
+node_modules
+
+# Ignore checkpoints created (especially for the examples)
+.ipynb_checkpoints
+
+.DS_Store
+
+# models
+imdb.d2v
+*.npy
+*.pyc
+
+#data
+data
+
+dataset_processed

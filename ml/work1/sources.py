@@ -1,0 +1,2 @@
+sources = {'test_neg.txt':'TEST_NEG', 'test_pos.txt':'TEST_POS', 'train_neg.txt':'TRAIN_NEG', 'train_pos.txt':'TRAIN_POS', 'test_unsup1.txt':'TEST_UNS1', 'test_unsup2.txt':'TEST_UNS2'}
+# sources = {'test.txt':'TEST'}
