@@ -9,7 +9,7 @@ Implementar o classificador KNN para a análise de sentimento da base IMDB
 
 # Metodologia
 
-Primeiramento foi realizado o pré-processamento do conjunto de dados.
+Primeiramente foi realizado o pré-processamento do conjunto de dados.
  
 Foi escolhido o dataset de http://ai.stanford.edu/%7Eamaas/data/sentiment/ (http://ai.stanford.edu/%7Eamaas/data/sentiment/aclImdb_v1.tar.gz) que estava com um formato de arquivo mais fácil para pré-processar.
 
@@ -29,7 +29,7 @@ Foi testada apenas a distância euclidiana.
 
 A implementação do knn é naive, sem otimizações, escrita em python. Optou-se por python para aprendizado da linguagem.
 
-Os resultados obtidos foram comparados com a implementação do KNN da biblioteca scikit-learn. O desempenho do algoritmo implementado é bastante inferior que a implementação do scikit, o que era esperado, pois não foram realizadas otimziações. Os resultados de score foram idênticos aos do scikit.
+Os resultados obtidos foram comparados com a implementação do KNN da biblioteca scikit-learn. O desempenho do algoritmo implementado é bastante inferior que a implementação do scikit, o que era esperado, pois não foram realizadas otimizações. Os resultados de score foram idênticos aos do scikit.
 
 O melhor K encontrado nos testes empíricos foi 9.
 
