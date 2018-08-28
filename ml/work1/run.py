@@ -120,9 +120,13 @@ from sklearn.metrics import classification_report
 
 from knn_naive import KnnClassifier
 knn = KnnClassifier(9, 2)
+print ('Fitting knn...')
 knn.fit(train_arrays, train_labels)
+print ('Predicting...')
 pred = knn.predict(test_arrays)
+print ('Score:')
 print (knn.score(test_arrays, test_labels))
+print ('Confusion matrix:')
 print (knn.confusion_matrix(test_labels, pred))
 
 # cria um kNN
