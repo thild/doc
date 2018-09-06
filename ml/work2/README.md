@@ -99,7 +99,7 @@ O teorema de Bayes fornece uma maneira de calcular a  probabilidade a posteriori
 
 Para DTs, a probabilidade prevista é a probabilidade média de uma folha, ou a fração de árvores que votam em qualquer classe. A probabilidade de predição para um caso particular é a probabilidade desse caso no nó da árvore usada para predição.
 
-As SVMs não produzem probabilidades nativamente, mas métodos de calibração de probabilidade podem ser usados para converter a saída em probabilidades de classe. Existem vários métodos, incluindo a escala de Platt e regressão isotônica. Se probabilidades forem usadas para medir o desempenho do classificador, isso deve ser feito usando um conjunto de testes independente para evitar bias.
+As SVMs não produzem probabilidades nativamente, mas métodos de calibração de probabilidade podem ser usados para converter a saída em probabilidades de classe. Existem vários métodos, incluindo a escala de Platt e regressão isotônica. Se probabilidades forem usadas para medir o desempenho do classificador, isso deve ser feito usando um conjunto de testes independentes para evitar bias.
 
 ## Comparação com a implementação do scikit-learn
 
@@ -124,7 +124,7 @@ E matriz de confusão:
 
 A matriz de confusão ficou bastante parecida com o teste com o libsvm, no entanto a taxa de acerto foi ~0.5% maior com o scikit-learn. A melhora com o scikit-learn deve-se a maior quantidade de folds na etapa de cross validation, 3 contra 1 no teste realizado com a libsvm.
 
-Não foi possível finalizar o teste completo com 29323 instâncias utilizando o cross validation do sci-kit devido ao tempo. Porém pode-se inferir que o resultado deverá ser melhor pelo maior número de folds no treinamento.
+Não foi possível finalizar o teste completo com 29323 instâncias utilizando o cross validation do sci-kit devido ao tempo. Porém pode-se inferir que o resultado deverá ser melhor pelo maior número de folds no treinamento. Pretende-se terminar o teste. Os resultados serão publicados neste repositório https://github.com/thild/doc/tree/master/ml/work2.
 
 <b id="f1">1</b> Os arquivos `treino.vet` e `teste.vet` foram copiados para a pasta dos `easy.py`. [↩](#a1)
 
