@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.10.0-alpha/dist/katex.min.css" integrity="sha384-BTL0nVi8DnMrNdMQZG1Ww6yasK9ZGnUxL1ZWukXQ7fygA1py52yPp9W4wrR00VML" crossorigin="anonymous">
+        <style>
+/*--------------------------------------------------------------------------------------------- * Copyright (c) Microsoft Corporation. All rights reserved. * Licensed under the MIT License. See License.txt in the project root for license information. *--------------------------------------------------------------------------------------------*/ body { font-family: "Segoe WPC", "Segoe UI", "SFUIText-Light", "HelveticaNeue-Light", sans-serif, "Droid Sans Fallback"; font-size: 14px; padding: 0 26px; line-height: 22px; word-wrap: break-word; } #code-csp-warning { position: fixed; top: 0; right: 0; color: white; margin: 16px; text-align: center; font-size: 12px; font-family: sans-serif; background-color:#444444; cursor: pointer; padding: 6px; box-shadow: 1px 1px 1px rgba(0,0,0,.25); } #code-csp-warning:hover { text-decoration: none; background-color:#007acc; box-shadow: 2px 2px 2px rgba(0,0,0,.25); } body.scrollBeyondLastLine { margin-bottom: calc(100vh - 22px); } body.showEditorSelection .code-line { position: relative; } body.showEditorSelection .code-active-line:before, body.showEditorSelection .code-line:hover:before { content: ""; display: block; position: absolute; top: 0; left: -12px; height: 100%; } body.showEditorSelection li.code-active-line:before, body.showEditorSelection li.code-line:hover:before { left: -30px; } .vscode-light.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(0, 0, 0, 0.15); } .vscode-light.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(0, 0, 0, 0.40); } .vscode-light.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-dark.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 255, 255, 0.4); } .vscode-dark.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 255, 255, 0.60); } .vscode-dark.showEditorSelection .code-line .code-line:hover:before { border-left: none; } .vscode-high-contrast.showEditorSelection .code-active-line:before { border-left: 3px solid rgba(255, 160, 0, 0.7); } .vscode-high-contrast.showEditorSelection .code-line:hover:before { border-left: 3px solid rgba(255, 160, 0, 1); } .vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before { border-left: none; } img { max-width: 100%; max-height: 100%; } a { text-decoration: none; } a:hover { text-decoration: underline; } a:focus, input:focus, select:focus, textarea:focus { outline: 1px solid -webkit-focus-ring-color; outline-offset: -1px; } hr { border: 0; height: 2px; border-bottom: 2px solid; } h1 { padding-bottom: 0.3em; line-height: 1.2; border-bottom-width: 1px; border-bottom-style: solid; } h1, h2, h3 { font-weight: normal; } h1 code, h2 code, h3 code, h4 code, h5 code, h6 code { font-size: inherit; line-height: auto; } table { border-collapse: collapse; } table > thead > tr > th { text-align: left; border-bottom: 1px solid; } table > thead > tr > th, table > thead > tr > td, table > tbody > tr > th, table > tbody > tr > td { padding: 5px 10px; } table > tbody > tr + tr > td { border-top: 1px solid; } blockquote { margin: 0 7px 0 5px; padding: 0 16px 0 10px; border-left-width: 5px; border-left-style: solid; } code { font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback"; font-size: 14px; line-height: 19px; } body.wordWrap pre { white-space: pre-wrap; } .mac code { font-size: 12px; line-height: 18px; } pre:not(.hljs), pre.hljs code > div { padding: 16px; border-radius: 3px; overflow: auto; } /** Theming */ pre code { color: var(--vscode-editor-foreground); } .vscode-light pre:not(.hljs), .vscode-light code > div { background-color: rgba(220, 220, 220, 0.4); } .vscode-dark pre:not(.hljs), .vscode-dark code > div { background-color: rgba(10, 10, 10, 0.4); } .vscode-high-contrast pre:not(.hljs), .vscode-high-contrast code > div { background-color: rgb(0, 0, 0); } .vscode-high-contrast h1 { border-color: rgb(0, 0, 0); } .vscode-light table > thead > tr > th { border-color: rgba(0, 0, 0, 0.69); } .vscode-dark table > thead > tr > th { border-color: rgba(255, 255, 255, 0.69); } .vscode-light h1, .vscode-light hr, .vscode-light table > tbody > tr + tr > td { border-color: rgba(0, 0, 0, 0.18); } .vscode-dark h1, .vscode-dark hr, .vscode-dark table > tbody > tr + tr > td { border-color: rgba(255, 255, 255, 0.18); } 
+</style>
+<style>
+/* Tomorrow Theme */ /* http://jmblog.github.com/color-themes-for-google-code-highlightjs */ /* Original theme - https://github.com/chriskempson/tomorrow-theme */ /* Tomorrow Comment */ .hljs-comment, .hljs-quote { color: #8e908c; } /* Tomorrow Red */ .hljs-variable, .hljs-template-variable, .hljs-tag, .hljs-name, .hljs-selector-id, .hljs-selector-class, .hljs-regexp, .hljs-deletion { color: #c82829; } /* Tomorrow Orange */ .hljs-number, .hljs-built_in, .hljs-builtin-name, .hljs-literal, .hljs-type, .hljs-params, .hljs-meta, .hljs-link { color: #f5871f; } /* Tomorrow Yellow */ .hljs-attribute { color: #eab700; } /* Tomorrow Green */ .hljs-string, .hljs-symbol, .hljs-bullet, .hljs-addition { color: #718c00; } /* Tomorrow Blue */ .hljs-title, .hljs-section { color: #4271ae; } /* Tomorrow Purple */ .hljs-keyword, .hljs-selector-tag { color: #8959a8; } .hljs { display: block; overflow-x: auto; color: #4d4d4c; padding: 0.5em; } .hljs-emphasis { font-style: italic; } .hljs-strong { font-weight: bold; }
+</style>
+<style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        <style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', 'HelveticaNeue-Light', 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="redes-com-camadas-e-n%C3%BAmero-de-neur%C3%B4nios-variados-e-20-%C3%A9pocas">Redes com camadas e número de neurônios variados, e 20 épocas</h1>
+<p><img src="file:///mnt/docs/dev/doc/ml/mlp/network/a_1_1.png" alt="">
+<img src="file:///mnt/docs/dev/doc/ml/mlp/network/a_1_50.png" alt="">
+<img src="file:///mnt/docs/dev/doc/ml/mlp/network/a_1_200.png" alt="">
+<img src="file:///mnt/docs/dev/doc/ml/mlp/network/a_2_50_50.png" alt="">
+<img src="file:///mnt/docs/dev/doc/ml/mlp/network/a_2_200_200.png" alt=""></p>
+<p>A rede com melhores resultados foi com a configuração de 1 camada e 200 neurônios, com 83,35% de acurácia. No entanto, a rede com apenas 1 neurônio teve acurácia parecida com também 20 épocas.</p>
+<p>As redes com mais de uma camada e com mais neurônios por camada tenderam a overfit.</p>
+<h1 id="redes-com-1-camada-50-neur%C3%B4nios-e-%C3%A9pocas-varias">Redes com 1 camada, 50 neurônios e épocas varias</h1>
+<p><img src="file:///mnt/docs/dev/doc/ml/mlp/overfit/a_20.png" alt="">
+<img src="file:///mnt/docs/dev/doc/ml/mlp/overfit/a_40.png" alt="">
+<img src="file:///mnt/docs/dev/doc/ml/mlp/overfit/a_80.png" alt="">
+<img src="file:///mnt/docs/dev/doc/ml/mlp/overfit/a_160.png" alt="">
+<img src="file:///mnt/docs/dev/doc/ml/mlp/overfit/a_320.png" alt=""></p>
+<p>Com relação à quantidade de épocas de treinamento, fica evidente o a piora na acurácia a partir de 80 épocas, tendendo a overfit.</p>
+<h1 id="compara%C3%A7%C3%A3o-com-vers%C3%B5es-com-classificadores-implementados-anteriormente">Comparação com versões com classificadores implementados anteriormente</h1>
+<p>Comparando com os trabalhos anteriores para KNN e SVM, a MLP teve resultados intermediários, porém há diferenças nas bases.</p>
+<p>Para o KNN as características foram extraídas usando o algoritmos doc2vec da biblioteca gensim com os seguintes parâmetros:</p>
+<p><code>Doc2Vec(min_count=1, window=10, size=100, sample=1e-4, negative=5, workers=16)</code></p>
+<p>O modelo foi treinado durante 20 épocas.</p>
+<p>O melhor K encontrado nos testes empíricos foi 9.</p>
+<p>O melhor score obtido foi 76% com 5000 instâncias de treinamento e 5000 instâncias de teste.</p>
+<p>Para o SVM usou-se os parâmetros c=2.0 e g=0.03125, obtendo-se acurácia de 96.6667%.</p>
+<p>A melhor rede encontrada, com 1 camada e 200 neurônios, e com 20 épocas de treinamento obteve uma acurácia de 83,35%</p>
+<h1 id="digitos-exerc%C3%ADcio-2">Digitos (Exercício 2)</h1>
+<p>O teste com CNN com a base dígitos não apresentou muitas diferenças com relação à mudança de parâmetros. O número de épocas teve maior impacto. Com duas épocas obteve-se 87% de acurácia e com 20 épocas 97%. Com variações em tamanho de kernel, polling e dropout obteve-se resultados também ao redor de 97%. As alterações em número de camadas diminuíram a acurácia para ~95%, bom como alterações nas funções de ativação.</p>
+<p>Default 2 épocas: 81%
+<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_default.png" alt=""></p>
+<p>20 épocas: 97%
+<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_20.png" alt=""></p>
+<p>20 épocas, kernel 5x5: 97%
+<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_epoch_20_kernel_5x5.png" alt=""></p>
+<p>20 épocas, kernel 3x3, AveragePooling2D 3x3: 96,1%
+<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_epoch_20_kernel_5x5.png" alt=""></p>
+<p>20 épocas, kernel 3x3, AveragePooling2D 2x2: 96,6%
+<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_epoch_20_kernel_3x3_AveragePooling2D_2x2.png" alt=""></p>
+<p>20 épocas, kernel 3x3, MaxPooling2D 3x3, Dropout 0,10/0,70: 96,8%
+<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_epoch_20_kernel_3x3_MaxPooling2D_3x3_dropout_10_70.png" alt=""></p>
+<p>20 épocas, kernel 3x3, MaxPooling2D 2x2, Dropout 0,10/0,70: 96,8%
+<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_epoch_20_kernel_3x3_MaxPooling2D_2x2_dropout_10_70.png" alt=""></p>
+<h1 id="meses-exerc%C3%ADcio-2">Meses (Exercício 2)</h1>
+<p>Para esta rede foram realizado apenas dois experimentos. No experimento <em>default</em> com a base sem <em>data augmentation</em> e 10 épocas de treinamento obteve-se acurácia de 75%.</p>
+<p><img src="file:///mnt/docs/dev/doc/ml/cnn/cm_meses/cnnmes_10.png" alt=""></p>
+<p>O outro experimento foi realizado com <em>data augmentation</em> e 20 épocas de treinamento, sem alterações nos parâmetros da rede. Para <em>data augmentation</em> foi utilizada a biblioteca <code>Augmentor</code> com <code>random_distortion</code> que gerou um total de 19031 samples. A acurácia para este experimento foi de 89,7%.</p>
+<pre class="hljs"><code><div><span class="hljs-comment">#!/usr/bin/python </span>
+
+<span class="hljs-keyword">import</span> Augmentor
+
+p = Augmentor.Pipeline(<span class="hljs-string">"./data/"</span>)
+p.random_distortion(probability=<span class="hljs-number">1</span>, grid_width=<span class="hljs-number">5</span>, grid_height=<span class="hljs-number">5</span>, magnitude=<span class="hljs-number">5</span>)
+p.sample(<span class="hljs-number">20000</span>)
+p.process()
+</div></code></pre>
+<p><img src="file:///mnt/docs/dev/doc/ml/cnn/cm_meses/cnnmes_20_aug.png" alt=""></p>
+<h1 id="descri%C3%A7%C3%A3o-do-trabalho">Descrição do trabalho</h1>
+<p>Exercícios Redes Neurais</p>
+<p>Exercício 1:</p>
+<p>Avalie a rede neural MLP para a classificação da base IMDB (mlp.zip). A rede em anexo contem uma camada escondida com 50 neurônios. A saída com duas possibilidades contém uma função de ativação softmax. Escreva um relatório avaliando:</p>
+<pre><code>A quantidade de neurônios na camada escondida
+Quantidade de camadas escondidas 
+Número de épocas de treinamento
+Overfitting da rede. Faça um gráfico mostrando a acurácia no treinamento e validação. Verifique se a rede entra em overfitting depois de um certo número de épocas de aprendizagem. 
+Compare a melhor rede encontrada com outros classificadores vistos em sala de aula. 
+</code></pre>
+<p>Exercício 2:</p>
+<p>Avalie as CNN para os dois problemas em anexo (dígitos e meses do ano - CNN.zip). Escreva um relatório avaliando os mesmos item do exercício anterior e também os parâmetros das camadas de convolução (tamanho do filtro, função de ativação, tipo de pooling, quantidade de camadas de convolução). Reporte os melhores resultados para as duas aplicações juntamente com as matrizes de confusão.</p>
+<p>Copyright (c) 2018 Tony Alexander Hild</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the &quot;Software&quot;), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+
+    </body>
+    </html>
