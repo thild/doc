@@ -4,6 +4,8 @@ Aluno: Tony Alexander Hild
 
 ([Descrição do trabalho](#Descrição-do-trabalho))
 
+(https://github.com/thild/doc/tree/master/ml/work3)
+
 # Relatório
 
 ## Redes com camadas e número de neurônios variados e 20 épocas
