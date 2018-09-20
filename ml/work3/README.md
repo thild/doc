@@ -1,5 +1,13 @@
+# Trabalho 3
 
-# Redes com camadas e número de neurônios variados, e 20 épocas
+Aluno: Tony Alexander Hild
+
+([Descrição do trabalho](#Descrição-do-trabalho))
+
+# Relatório
+
+## Redes com camadas e número de neurônios variados e 20 épocas
+
 ![](./mlp/network/a_1_1.png)
 ![](./mlp/network/a_1_50.png)
 ![](./mlp/network/a_1_200.png)
@@ -10,7 +18,7 @@ A rede com melhores resultados foi com a configuração de 1 camada e 200 neurô
 
 As redes com mais de uma camada e com mais neurônios por camada tenderam a overfit.
 
-# Redes com 1 camada, 50 neurônios e épocas varias
+## Redes com 1 camada, 50 neurônios e várias épocas
 ![](./mlp/overfit/a_20.png)
 ![](./mlp/overfit/a_40.png)
 ![](./mlp/overfit/a_80.png)
@@ -19,7 +27,7 @@ As redes com mais de uma camada e com mais neurônios por camada tenderam a over
 
 Com relação à quantidade de épocas de treinamento, fica evidente o a piora na acurácia a partir de 80 épocas, tendendo a overfit.
 
-# Comparação com versões com classificadores implementados anteriormente
+## Comparação com versões com classificadores implementados anteriormente
 
 Comparando com os trabalhos anteriores para KNN e SVM, a MLP teve resultados intermediários, porém há diferenças nas bases.
 
@@ -37,35 +45,49 @@ Para o SVM usou-se os parâmetros c=2.0 e g=0.03125, obtendo-se acurácia de 96.
 
 A melhor rede encontrada, com 1 camada e 200 neurônios, e com 20 épocas de treinamento obteve uma acurácia de 83,35%
 
-# Digitos (Exercício 2)
+## Dígitos (Exercício 2)
 
 O teste com CNN com a base dígitos não apresentou muitas diferenças com relação à mudança de parâmetros. O número de épocas teve maior impacto. Com duas épocas obteve-se 87% de acurácia e com 20 épocas 97%. Com variações em tamanho de kernel, polling e dropout obteve-se resultados também ao redor de 97%. As alterações em número de camadas diminuíram a acurácia para ~95%, bom como alterações nas funções de ativação.
 
 Default 2 épocas: 81%
+
 ![](./cnn/cm_digits/cnn_default.png)
 
+
 20 épocas: 97%
+
 ![](./cnn/cm_digits/cnn_20.png)
 
+
 20 épocas, kernel 5x5: 97%
+
 ![](./cnn/cm_digits/cnn_epoch_20_kernel_5x5.png)
+
 
 20 épocas, kernel 3x3, AveragePooling2D 3x3: 96,1%
+
 ![](./cnn/cm_digits/cnn_epoch_20_kernel_5x5.png)
 
+
 20 épocas, kernel 3x3, AveragePooling2D 2x2: 96,6%
-![](./cnn/cm_digits/cnn_epoch_20_kernel_3x3_AveragePooling2D_2x2.png)
+![]
+(./cnn/cm_digits/cnn_epoch_20_kernel_3x3_AveragePooling2D_2x2.png)
+
 
 20 épocas, kernel 3x3, MaxPooling2D 3x3, Dropout 0,10/0,70: 96,8%
+
 ![](./cnn/cm_digits/cnn_epoch_20_kernel_3x3_MaxPooling2D_3x3_dropout_10_70.png)
 
+
 20 épocas, kernel 3x3, MaxPooling2D 2x2, Dropout 0,10/0,70: 96,8%
+
 ![](./cnn/cm_digits/cnn_epoch_20_kernel_3x3_MaxPooling2D_2x2_dropout_10_70.png)
 
 
-# Meses (Exercício 2)
+## Meses (Exercício 2)
 
 Para esta rede foram realizado apenas dois experimentos. No experimento *default* com a base sem *data augmentation* e 10 épocas de treinamento obteve-se acurácia de 75%.
+
 
 ![](./cnn/cm_meses/cnnmes_10.png)
 
@@ -85,6 +107,7 @@ p.process()
 ```
 
 ![](./cnn/cm_meses/cnnmes_20_aug.png)
+
 
 # Descrição do trabalho
 

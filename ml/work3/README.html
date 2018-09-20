@@ -21,22 +21,26 @@
         </style>
     </head>
     <body>
-        <h1 id="redes-com-camadas-e-n%C3%BAmero-de-neur%C3%B4nios-variados-e-20-%C3%A9pocas">Redes com camadas e número de neurônios variados, e 20 épocas</h1>
-<p><img src="file:///mnt/docs/dev/doc/ml/mlp/network/a_1_1.png" alt="">
-<img src="file:///mnt/docs/dev/doc/ml/mlp/network/a_1_50.png" alt="">
-<img src="file:///mnt/docs/dev/doc/ml/mlp/network/a_1_200.png" alt="">
-<img src="file:///mnt/docs/dev/doc/ml/mlp/network/a_2_50_50.png" alt="">
-<img src="file:///mnt/docs/dev/doc/ml/mlp/network/a_2_200_200.png" alt=""></p>
+        <h1 id="trabalho-3">Trabalho 3</h1>
+<p>Aluno: Tony Alexander Hild</p>
+<p>(<a href="#Descri%C3%A7%C3%A3o-do-trabalho">Descrição do trabalho</a>)</p>
+<h1 id="relat%C3%B3rio">Relatório</h1>
+<h2 id="redes-com-camadas-e-n%C3%BAmero-de-neur%C3%B4nios-variados-e-20-%C3%A9pocas">Redes com camadas e número de neurônios variados e 20 épocas</h2>
+<p><img src="./mlp/network/a_1_1.png" alt="">
+<img src="./mlp/network/a_1_50.png" alt="">
+<img src="./mlp/network/a_1_200.png" alt="">
+<img src="./mlp/network/a_2_50_50.png" alt="">
+<img src="./mlp/network/a_2_200_200.png" alt=""></p>
 <p>A rede com melhores resultados foi com a configuração de 1 camada e 200 neurônios, com 83,35% de acurácia. No entanto, a rede com apenas 1 neurônio teve acurácia parecida com também 20 épocas.</p>
 <p>As redes com mais de uma camada e com mais neurônios por camada tenderam a overfit.</p>
-<h1 id="redes-com-1-camada-50-neur%C3%B4nios-e-%C3%A9pocas-varias">Redes com 1 camada, 50 neurônios e épocas varias</h1>
-<p><img src="file:///mnt/docs/dev/doc/ml/mlp/overfit/a_20.png" alt="">
-<img src="file:///mnt/docs/dev/doc/ml/mlp/overfit/a_40.png" alt="">
-<img src="file:///mnt/docs/dev/doc/ml/mlp/overfit/a_80.png" alt="">
-<img src="file:///mnt/docs/dev/doc/ml/mlp/overfit/a_160.png" alt="">
-<img src="file:///mnt/docs/dev/doc/ml/mlp/overfit/a_320.png" alt=""></p>
+<h2 id="redes-com-1-camada-50-neur%C3%B4nios-e-v%C3%A1rias-%C3%A9pocas">Redes com 1 camada, 50 neurônios e várias épocas</h2>
+<p><img src="./mlp/overfit/a_20.png" alt="">
+<img src="./mlp/overfit/a_40.png" alt="">
+<img src="./mlp/overfit/a_80.png" alt="">
+<img src="./mlp/overfit/a_160.png" alt="">
+<img src="./mlp/overfit/a_320.png" alt=""></p>
 <p>Com relação à quantidade de épocas de treinamento, fica evidente o a piora na acurácia a partir de 80 épocas, tendendo a overfit.</p>
-<h1 id="compara%C3%A7%C3%A3o-com-vers%C3%B5es-com-classificadores-implementados-anteriormente">Comparação com versões com classificadores implementados anteriormente</h1>
+<h2 id="compara%C3%A7%C3%A3o-com-vers%C3%B5es-com-classificadores-implementados-anteriormente">Comparação com versões com classificadores implementados anteriormente</h2>
 <p>Comparando com os trabalhos anteriores para KNN e SVM, a MLP teve resultados intermediários, porém há diferenças nas bases.</p>
 <p>Para o KNN as características foram extraídas usando o algoritmos doc2vec da biblioteca gensim com os seguintes parâmetros:</p>
 <p><code>Doc2Vec(min_count=1, window=10, size=100, sample=1e-4, negative=5, workers=16)</code></p>
@@ -45,25 +49,26 @@
 <p>O melhor score obtido foi 76% com 5000 instâncias de treinamento e 5000 instâncias de teste.</p>
 <p>Para o SVM usou-se os parâmetros c=2.0 e g=0.03125, obtendo-se acurácia de 96.6667%.</p>
 <p>A melhor rede encontrada, com 1 camada e 200 neurônios, e com 20 épocas de treinamento obteve uma acurácia de 83,35%</p>
-<h1 id="digitos-exerc%C3%ADcio-2">Digitos (Exercício 2)</h1>
+<h2 id="d%C3%ADgitos-exerc%C3%ADcio-2">Dígitos (Exercício 2)</h2>
 <p>O teste com CNN com a base dígitos não apresentou muitas diferenças com relação à mudança de parâmetros. O número de épocas teve maior impacto. Com duas épocas obteve-se 87% de acurácia e com 20 épocas 97%. Com variações em tamanho de kernel, polling e dropout obteve-se resultados também ao redor de 97%. As alterações em número de camadas diminuíram a acurácia para ~95%, bom como alterações nas funções de ativação.</p>
-<p>Default 2 épocas: 81%
-<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_default.png" alt=""></p>
-<p>20 épocas: 97%
-<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_20.png" alt=""></p>
-<p>20 épocas, kernel 5x5: 97%
-<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_epoch_20_kernel_5x5.png" alt=""></p>
-<p>20 épocas, kernel 3x3, AveragePooling2D 3x3: 96,1%
-<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_epoch_20_kernel_5x5.png" alt=""></p>
+<p>Default 2 épocas: 81%</p>
+<p><img src="./cnn/cm_digits/cnn_default.png" alt=""></p>
+<p>20 épocas: 97%</p>
+<p><img src="./cnn/cm_digits/cnn_20.png" alt=""></p>
+<p>20 épocas, kernel 5x5: 97%</p>
+<p><img src="./cnn/cm_digits/cnn_epoch_20_kernel_5x5.png" alt=""></p>
+<p>20 épocas, kernel 3x3, AveragePooling2D 3x3: 96,1%</p>
+<p><img src="./cnn/cm_digits/cnn_epoch_20_kernel_5x5.png" alt=""></p>
 <p>20 épocas, kernel 3x3, AveragePooling2D 2x2: 96,6%
-<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_epoch_20_kernel_3x3_AveragePooling2D_2x2.png" alt=""></p>
-<p>20 épocas, kernel 3x3, MaxPooling2D 3x3, Dropout 0,10/0,70: 96,8%
-<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_epoch_20_kernel_3x3_MaxPooling2D_3x3_dropout_10_70.png" alt=""></p>
-<p>20 épocas, kernel 3x3, MaxPooling2D 2x2, Dropout 0,10/0,70: 96,8%
-<img src="file:///mnt/docs/dev/doc/ml/cnn/cm_digits/cnn_epoch_20_kernel_3x3_MaxPooling2D_2x2_dropout_10_70.png" alt=""></p>
-<h1 id="meses-exerc%C3%ADcio-2">Meses (Exercício 2)</h1>
+![]
+(./cnn/cm_digits/cnn_epoch_20_kernel_3x3_AveragePooling2D_2x2.png)</p>
+<p>20 épocas, kernel 3x3, MaxPooling2D 3x3, Dropout 0,10/0,70: 96,8%</p>
+<p><img src="./cnn/cm_digits/cnn_epoch_20_kernel_3x3_MaxPooling2D_3x3_dropout_10_70.png" alt=""></p>
+<p>20 épocas, kernel 3x3, MaxPooling2D 2x2, Dropout 0,10/0,70: 96,8%</p>
+<p><img src="./cnn/cm_digits/cnn_epoch_20_kernel_3x3_MaxPooling2D_2x2_dropout_10_70.png" alt=""></p>
+<h2 id="meses-exerc%C3%ADcio-2">Meses (Exercício 2)</h2>
 <p>Para esta rede foram realizado apenas dois experimentos. No experimento <em>default</em> com a base sem <em>data augmentation</em> e 10 épocas de treinamento obteve-se acurácia de 75%.</p>
-<p><img src="file:///mnt/docs/dev/doc/ml/cnn/cm_meses/cnnmes_10.png" alt=""></p>
+<p><img src="./cnn/cm_meses/cnnmes_10.png" alt=""></p>
 <p>O outro experimento foi realizado com <em>data augmentation</em> e 20 épocas de treinamento, sem alterações nos parâmetros da rede. Para <em>data augmentation</em> foi utilizada a biblioteca <code>Augmentor</code> com <code>random_distortion</code> que gerou um total de 19031 samples. A acurácia para este experimento foi de 89,7%.</p>
 <pre class="hljs"><code><div><span class="hljs-comment">#!/usr/bin/python </span>
 
@@ -74,7 +79,7 @@ p.random_distortion(probability=<span class="hljs-number">1</span>, grid_width=<
 p.sample(<span class="hljs-number">20000</span>)
 p.process()
 </div></code></pre>
-<p><img src="file:///mnt/docs/dev/doc/ml/cnn/cm_meses/cnnmes_20_aug.png" alt=""></p>
+<p><img src="./cnn/cm_meses/cnnmes_20_aug.png" alt=""></p>
 <h1 id="descri%C3%A7%C3%A3o-do-trabalho">Descrição do trabalho</h1>
 <p>Exercícios Redes Neurais</p>
 <p>Exercício 1:</p>
