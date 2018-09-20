@@ -72,8 +72,8 @@ Default 2 épocas: 81%
 
 
 20 épocas, kernel 3x3, AveragePooling2D 2x2: 96,6%
-![]
-(./cnn/cm_digits/cnn_epoch_20_kernel_3x3_AveragePooling2D_2x2.png)
+
+![](./cnn/cm_digits/cnn_epoch_20_kernel_3x3_AveragePooling2D_2x2.png)
 
 
 20 épocas, kernel 3x3, MaxPooling2D 3x3, Dropout 0,10/0,70: 96,8%
